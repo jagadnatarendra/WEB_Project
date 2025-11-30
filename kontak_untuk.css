@@ -1,0 +1,191 @@
+/* ================= GLOBAL ================= */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: #2c3e50;
+    color: #fff;
+    border-bottom: 3px solid #d35400;
+}
+
+/* Beri ruang kiri-kanan agar tidak mepet */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 45px; /* ← ditambah dari 25px jadi 45px */
+}
+
+/* Logo */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Ukuran teks pada header */
+.logo-text h1 {
+    font-size: 1.3em;   /* sebelumnya 1.6em → diperkecil */
+    margin: 0;
+}
+
+.logo-text p {
+    font-size: 0.78em;  /* sebelumnya 0.85em → diperkecil */
+    margin: 2px 0 0;
+    color: #ddd;
+}
+
+/* Ukuran logo header */
+.logo-img {
+    width: 60px;   /* perkecil dari 60px -> 40px */
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Navigasi */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: flex;
+}
+
+/* Link menu */
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 8px 18px;         /* ← dibutuhkan agar background hover ikut membesar */
+    border-radius: 6px;        /* ← bentuk rounded */
+    transition: 0.25s ease;
+}
+
+/* Hover seperti gambar */
+.nav a:hover {
+    background: #d35400;
+    color: #fff; /* tetap putih */
+}
+
+
+/* ================= CONTACT SECTION ================= */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
+}
+
+/* Header kontak */
+.contact-header {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.contact-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-logo {
+  width: 120px;
+  margin: 0 auto 15px auto;
+}
+
+.contact-header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px #000;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+
+/* FORM */
+.contact-form {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.contact-form.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-form input,
+.contact-form textarea,
+.btn-send {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #444;
+  background: #fff;
+}
+
+/* Disable textarea resize */
+.contact-form textarea {
+  resize: none;
+}
+
+/* Button */
+.btn-send {
+  background: #f1c40f;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-send:hover {
+  background: #d4ac0d;
+}
+
+/* Animations */
+.animate-fade, .animate-slide {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 1.4em;
+  }
+  .contact-logo {
+    width: 90px;
+  }
+}

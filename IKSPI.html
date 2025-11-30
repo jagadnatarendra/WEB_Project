@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel IKSPI Kera Sakti - Bela Diri Nusantara</title>
+    <link rel="stylesheet" href="ar_lengkap.css">
+
+    <style>
+        /* Perkecil teks header mengikuti logo */
+        .logo-text h1 {
+            font-size: 1.4em;
+            margin: 0;
+        }
+        .logo-text p {
+            font-size: 0.75em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-top">
+            <div class="logo-area">
+                <img src="c:\Users\dell\Downloads\IPSI.jpeg" alt="Logo Silat Indonesia" class="logo-img">
+                <div class="logo-text">
+                    <h1>Bela Diri Nusantara</h1>
+                    <p>Dashboard Seni Bela Diri Tradisional Indonesia</p>
+                </div>
+            </div>
+
+            <div class="search-bar wide">
+                <input type="text" id="searchInput" placeholder="Cari artikel bela diri...">
+                <button onclick="searchArticle()">Cari</button>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="project_web.html">Home</a></li>
+                <li><a href="artikel_lengkap.html">Artikel</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="split-header">
+        <div class="header-left">
+            <h1>Artikel Bela Diri Nusantara</h1>
+            <p>Temukan kisah, filosofi, dan inspirasi dari dunia seni bela diri Indonesia.</p>
+        </div>
+
+        <div class="header-right">
+            <iframe 
+                src="c:\Users\dell\Downloads\[IKLAN] Ikatan Pencak Silat Indonesia ASIAN GAMES - Prabowo Subianto.mp4"
+                title="Video Pencak Silat"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-image">
+                <img src="c:\Users\dell\Downloads\Silat.jpeg" alt="Kuda-kuda Silat" loading="lazy">
+            </div>
+
+            <div class="stats-content">
+                <div class="stat-item">
+                    <h2>10</h2>
+                    <p>Coaches</p>
+                </div>
+                <div class="stat-item">
+                    <h2>85</h2>
+                    <p>Trophies</p>
+                </div>
+                <div class="stat-item">
+                    <h2>100</h2>
+                    <p>Games Played</p>
+                </div>
+                <div class="stat-item">
+                    <h2>37</h2>
+                    <p>Athletes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="latest-stories container" id="cerita-terbaru"> 
+        <div class="section-header">
+            <h2>Cerita Terbaru</h2>
+        </div>
+
+        <div class="stories-grid">
+
+            <!-- Artikel Utama IKSPI -->
+            <div class="main-story" id="ikspi">
+                <img src="c:\Users\dell\Downloads\Logo-IKSPI.png" alt="IKSPI Kera Sakti">
+                <h3>IKSPI Kera Sakti</h3>
+
+                <p>IKSPI Kera Sakti atau Ikatan Keluarga Silat Putra Indonesia Kera Sakti didirikan oleh R. Totong Kiemdarto di Madiun pada tanggal 15 Januari 1980.</p>
+
+                <p>Seni bela diri ini menggabungkan teknik pencak silat Indonesia dengan unsur kungfu aliran kera dan macan dari Tiongkok. Gerakannya menekankan kecepatan, ketepatan, kelincahan, dan penggunaan tenaga dalam.</p>
+
+                <p>IKSPI memiliki motto <b>“Di atas langit masih ada langit”</b>, mengajarkan agar setiap murid tetap rendah hati dan terus belajar.</p>
+
+                <p>Kini, IKSPI telah berkembang pesat dan memiliki cabang di berbagai daerah serta beberapa negara lain.</p>
+
+                <span class="date">8 Oktober 2025</span>
+            </div>
+
+            <!-- Side Stories -->
+            <div class="side-stories">
+
+                <div class="story">
+                    <a href="artikel_lengkap.html#psht">
+                        <img src="c:\Users\dell\Downloads\Logo-psht.jpg" alt="PSHT">
+                    </a>
+                    <div class="text">
+                        <a href="artikel_lengkap.html#psht">
+                            <h4>PSHT</h4>
+                        </a>
+                        <span class="date">12 Okt 2025</span>
+                    </div>
+                </div>
+
+                <div class="story">
+                     <a href="pagar_nusa.html#pagar-nusa">
+                        <img src="c:\Users\dell\Downloads\PAGAR NUSA.png" alt="Pagar Nusa">
+                    </a>
+                    <div class="text">
+                        <a href="pagar_nusa.html#pagar-nusa">
+                            <h4>Pagar Nusa</h4>
+                        </a>
+                        <span class="date">10 Okt 2025</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- =================================================== -->
+<!--                SCRIPT SEARCH OTOMATIS               -->
+<!-- =================================================== -->
+
+<script>
+function searchArticle() {
+    let keyword = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    const routes = {
+        "psht": "artikel_lengkap.html#cerita-terbaru",
+        "setia hati": "artikel_lengkap.html#cerita-terbaru",
+        "persaudaraan setia hati": "artikel_lengkap.html#cerita-terbaru",
+        "terate": "artikel_lengkap.html#cerita-terbaru",
+
+        "pagar nusa": "pagar_nusa.html#cerita-terbaru",
+        "pagarnusa": "pagar_nusa.html#cerita-terbaru",
+
+        "ikspi": "IKSPI.html#cerita-terbaru",
+        "iks": "IKSPI.html#cerita-terbaru",
+        "kera sakti": "IKSPI.html#cerita-terbaru"
+    };
+
+    for (let key in routes) {
+        if (keyword.includes(key)) {
+            window.location.href = routes[key];
+            return;
+        }
+    }
+
+    alert("Artikel tidak ditemukan. Coba kata kunci lain.");
+}
+</script>
+
+</body>
+</html>

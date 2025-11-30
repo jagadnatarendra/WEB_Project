@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Bela Diri Nusantara</title>
+  <link rel="stylesheet" href="kontak_untuk.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-bar">
+        <div class="logo-area">
+            <img src="c:\Users\dell\Downloads\IPSI.jpeg" alt="Logo Silat Indonesia" class="logo-img">
+            <div class="logo-text">
+                <h1>Bela Diri Nusantara</h1>
+                <p>Dashboard Seni Bela Diri Tradisional Indonesia</p>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="project_web.html">Home</a></li>
+                <li><a href="artikel_lengkap.html">Artikel</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <!-- ================= HALAMAN KONTAK ================= -->
+  <section class="contact-section">
+    <div class="contact-header animate-fade">
+      <img src="c:/Users/dell/Downloads/IPSI.jpeg" alt="Logo IPSI" class="contact-logo">
+      <h1>GET IN TOUCH AND LET'S START<br>SOMETHING GREAT TOGETHER</h1>
+    </div>
+
+    <form class="contact-form animate-slide" action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject">
+      <textarea name="message" rows="6" placeholder="Message"></textarea>
+      <button type="submit" class="btn-send">Send</button>
+    </form>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fadeElements = document.querySelectorAll(".animate-fade, .animate-slide");
+      fadeElements.forEach((el) => el.classList.add("visible"));
+    });
+  </script>
+
+</body>
+</html>

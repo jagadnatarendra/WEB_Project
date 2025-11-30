@@ -1,0 +1,400 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+    background: #2c3e50;
+    color: #fff;
+    border-bottom: 3px solid #d35400;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0; 
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 1.6em;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.logo-text p {
+    font-size: 0.85em;
+    color: #ddd;
+}
+
+/* Navigasi di Header Top BARU (.nav-header-top) */
+.nav-header-top ul {
+    list-style: none;
+    display: flex; 
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-header-top a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 10px; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-header-top a:hover {
+    color: #fff;
+    background-color: #d35400; 
+}
+
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #ecf0f1;
+}
+
+.hero-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* GALERI HORIZONTAL */
+.photo-gallery-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    
+    /* Trik untuk memastikan item pertama dan terakhir bisa ketengah */
+    padding-left: calc(50% - 110px); 
+    padding-right: calc(50% - 110px);
+}
+
+/* Sembunyikan scrollbar di Chrome/Safari */
+.photo-gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.photo-gallery {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.photo-item {
+    position: relative;
+    width: 220px; 
+    height: 220px;
+    background: #fff; 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    scroll-snap-align: center;
+    flex-shrink: 0; 
+}
+
+.photo-item a {
+    text-decoration: none; 
+    color: inherit;
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.photo-item img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain; 
+    display: block;
+}
+
+.photo-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(44, 62, 80, 0.9);
+    color: #fff;
+    padding: 10px;
+    font-size: 0.95em;
+    font-weight: bold;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover .overlay {
+    transform: translateY(0);
+}
+
+
+/* BAGIAN IPSI */
+.about-ipsi {
+    background: #fff;
+    padding: 60px 20px;
+}
+
+.about-ipsi-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-ipsi-image img {
+    width: 550px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-ipsi-text {
+    flex: 1;
+    color: #333;
+}
+
+.about-ipsi-text h2 {
+    font-size: 2.4em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-ipsi-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* RESPONSIF IPSI */
+@media (max-width: 768px) {
+    .about-ipsi-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-ipsi-image img {
+        width: 100%;
+    }
+
+    .about-ipsi-text h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* BAGIAN INFORMASI PENCAK SILAT */
+.silat-info {
+    background: #f8f9fa;
+    padding: 60px 20px;
+}
+
+.silat-info-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.silat-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.info-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.info-content {
+    padding: 20px;
+}
+
+.info-content h3 {
+    color: #2c3e50;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.info-content .subtitle {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.info-content p {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background: #eee;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    color: #555;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .silat-info-title {
+        font-size: 1.6em;
+    }
+
+    .info-content h3 {
+        font-size: 1.1em;
+    }
+}
+
+
+/* MAIN CONTENT */
+.main {
+    background: #fff;
+    padding: 40px 20px;
+    border-top: 2px solid #ddd;
+}
+
+.summary h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.summary p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quick-links {
+    text-align: center;
+}
+
+.quick-links ul {
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+}
+
+.quick-links li {
+    margin: 8px 0;
+}
+
+.quick-links a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #e67e22;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIF MENU BARU */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center; 
+        gap: 15px;
+    }
+    
+    .nav-header-top ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+}
